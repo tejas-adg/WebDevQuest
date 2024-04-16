@@ -1,0 +1,134 @@
+<!-- This special string is known as a declaration and ensures the browser tries to meet industry-wide specifications. -->
+<!DOCTYPE html>
+
+<!-- The `html` element wraps all the content on the entire page and is sometimes known as the root element. -->
+<html lang="en">
+<!-- The lang attribute with the value `en` in the opening html tag specifies that the language of the page is English. -->
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- The title element determines what browsers show in the title bar or tab for the page. -->
+	<title>CatPhotoApp</title>
+</head>
+
+<!-- The body element contains all the content of an HTML document, such as text, hyperlinks, images, tables, lists, etc. -->
+<!-- All page content elements that should be rendered to the page go inside the body element. -->
+<body>
+	<!-- HTML5 has some elements that identify different content areas.
+		These elements make your HTML easier to read and help with Search Engine Optimization (SEO) and accessibility. -->
+	<main> <!-- 'main' identifies the main section of the page -->
+
+		<h1>CatPhotoApp</h1>
+		<section>
+			<!-- The h1 through h6 heading elements are used to signify the importance of content below them.
+				The lower the number, the higher the importance, so h2 elements have less importance than h1 elements.
+				Only use one h1 element per page and place lower importance headings below higher importance headings. -->
+			<h2>Cat Photos</h2>
+
+			<!-- TODO: Add link to cat photos --> <!-- Example of how to add comments -->
+			<!-- Example of
+			multi-line comments
+			in HTML -->
+
+			<!-- The p element is used to create a paragraph of text on websites. -->
+			<p>See more <a target="_blank" href="https://freecatphotoapp.com" rel="noopener">cat photos</a> in our
+				gallery.</p>
+
+			<!-- HTML attributes are special words used inside the opening tag of an element to control the element's behavior. -->
+			<!-- Any type of content can be turned into a link by wrapping it in anchor tags. -->
+			<a href="https://freecatphotoapp.com"><img
+					src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+					alt="A cute orange cat lying on its back."></a>
+			<!-- All img elements should have an alt attribute!
+				The alt attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load. -->
+		</section>
+		<section>
+			<h2>Cat Lists</h2>
+			<h3>Things cats love:</h3>
+
+			<!-- Unordered List -->
+			<ul>
+				<li>cat nip</li>
+				<li>laser pointers</li>
+				<li>lasagna</li>
+			</ul>
+
+			<!-- The figure element represents self-contained content and will allow you to associate an image with a caption. -->
+			<figure>
+				<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+					alt="A slice of lasagna on a plate.">
+
+				<!-- A figure caption (figcaption) element is used to add a caption to describe the image contained within the figure element.
+					For example, `<figcaption>A cute cat</figcaption>` adds the caption `A cute cat`. -->
+				<figcaption>Cats <em>love</em> lasagna.</figcaption>
+				<!-- Wrapping text with the `em` element emphasizes the text -->
+
+			</figure>
+			<h3>Top 3 things cats hate:</h3>
+
+			<!-- Ordered List -->
+			<ol>
+				<li>flea treatment</li>
+				<li>thunder</li>
+				<li>other cats</li>
+			</ol>
+			<figure>
+				<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+					alt="Five cats looking around a field.">
+
+				<figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+				<!-- Wrapping text with the `strong` element indicates that the text has strong importance. -->
+
+			</figure>
+		</section>
+		<section>
+			<h2>Cat Form</h2>
+			<form action="https://freecatphotoapp.com/submit-cat-photo">
+
+				<!-- The `fieldset` element is used to group related inputs and labels together in a web form.
+					`fieldset` elements are block-level elements, meaning that they appear on a new line. -->
+				<fieldset>
+
+					<!-- The `legend` element represents a caption for the content of its parent `fieldset` element.
+						The `legend` element should be the first child of the `fieldset` element. -->
+					<legend>Is your cat an indoor or outdoor cat?</legend>
+
+					<!-- The `id` attribute is used to identify specific HTML elements. Each `id` attribute's value must be unique from all other id values for the entire page. -->
+					<label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+					<!-- To make it so selecting one radio button automatically deselects the other, both radio buttons must have the same value for their `name` attribute. -->
+					<label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+					<!-- The form data for the button is based on its `name` and `value` attributes.
+						If your radio buttons do not have a value attribute, the form data will include `indoor-outdoor=on`, which is not useful when you have multiple buttons. -->
+
+				</fieldset>
+				<fieldset>
+					<legend>What's your cat's personality?</legend>
+
+					<input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+					<!-- The `for` attribute on a `label` element explicitly associates the label with the input element it is labeling. -->
+
+					<input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+					<input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+				</fieldset>
+
+				<!-- In order for a form's data to be accessed by the location specified in the action attribute,
+					you must give the text field a name attribute and assign it a value to represent the data being submitted.
+					For example, you could use the following syntax for an email address text field: `<input type="text" name="email">`. -->
+				<input type="text" name="catphotourl" placeholder="cat photo URL" required>
+				<!-- To prevent a user from submitting your form when required information is missing, you need to add the `required` attribute to an input element. -->
+
+				<button type="submit">Submit</button>
+				<!-- both input and button elements are inline elements, which don't appear on new lines -->
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>
+			No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+		</p>
+	</footer>
+</body>
+
+</html>
