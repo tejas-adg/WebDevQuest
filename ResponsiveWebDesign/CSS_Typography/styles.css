@@ -1,3 +1,16 @@
+/*
+Good use of white space can bring focus to the important elements of your page, and help guide your user's eyes through your text.
+
+Remember that the use of h1, h2, and similar tags determine the semantic structure of your HTML.
+However, you can adjust the CSS of these elements to control the visual flow and hierarchy.
+
+Lines can help separate and group important content, especially when space is limited.
+
+Horizontal spacing between equally important elements can increase the readability of your text.
+
+Typography is often more art than science. You may have to tweak things like alignment until it looks correct.
+*/
+
 * {
 	box-sizing: border-box;
 }
@@ -20,6 +33,8 @@ body {
 header h1 {
 	text-align: center;
 	margin: -4px 0;
+
+	/* The letter-spacing property can be used to adjust the space between each character of text in an element.*/
 	letter-spacing: 0.15px
 }
 
@@ -34,6 +49,9 @@ p {
 	margin: 2px 0;
 }
 
+/*
+Rather than targeting each element that needs to be bold, it is more efficient to use a class to apply the bold styling to every element.
+*/
 .bold {
 	font-weight: 800;
 }
@@ -90,11 +108,22 @@ p {
 	margin-left: 2em;
 }
 
+/*
+The :not pseudo-selector can be used to select all elements that do not match the given CSS rule.
+
+div:not(#example) {
+  color: red;
+}
+
+The above selects all div elements without an id of example.
+*/
 .daily-value p:not(.no-divider) {
 	border-bottom: 1px solid #888989;
 }
 
 .note {
+
+	/* The rem unit stands for root em, and is relative to the font size of the html element. */
 	font-size: 0.6rem;
 	margin: 5px 0;
 	text-indent: -8px;

@@ -1,5 +1,13 @@
+/*
+Most browsers inject their own default CSS properties and values for different elements.
+By default, a padding of 1px 2px is given to input elements you can type in.
+*/
+
 body {
 	width: 100%;
+
+	/* The vh unit stands for viewport height, and is equal to 1% of the height of the viewport.
+	This makes it relative to the viewport height. */
 	height: 100vh;
 	margin: 0;
 	background-color: #1b1b32;
@@ -53,11 +61,20 @@ textarea {
 }
 
 .inline {
+
+	/* Giving elements a width of `unset`. This will remove the earlier rule which set all the input elements to `width: 100%`. */
 	width: unset;
 	margin: 0 0.5em 0 0;
 	vertical-align: middle;
 }
 
+/*
+To style the submit button, you can use an attribute selector, which selects an element based on the given attribute value. Here is an example:
+
+`input[name="password"]`
+
+The above selects input elements with a name attribute value of password.
+*/
 input[type="submit"] {
 	display: block;
 	width: 60%;

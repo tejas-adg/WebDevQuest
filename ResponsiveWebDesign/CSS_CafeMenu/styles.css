@@ -1,3 +1,30 @@
+/* You can add style to an element by specifying it in the style element and setting a property for it like this:
+
+element {
+ property: value;
+}
+
+This uses a "type selector" to style the h1 element
+*/
+
+/*
+You can use the id selector to target a specific element with an id attribute. An id selector is defined by placing the hash symbol # directly in front of the element's id value. For example, if an element has the id of cat then you would target that element like this:
+
+#cat {
+  width: 250px;
+}
+*/
+
+/*
+It is more common to use a class selector to style elements.
+
+A class selector is defined by a name with a dot directly in front of it, like this:
+
+.class-name {
+  styles
+}
+*/
+
 body {
     background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
     font-family: sans-serif;
@@ -18,12 +45,21 @@ h2 {
     font-style: italic;
 }
 
+/*
+You now have three type selectors with the exact same styling. You can add the same group of styles to many elements by creating a list of selectors. Each selector is separated with commas like this:
+
+selector1, selector2 {
+  property: value;
+}
+*/
 h1,
 h2,
 p {
     text-align: center;
 }
 
+/* Next, you want to center the #menu horizontally.
+You can do this by setting its margin-left and margin-right properties to auto. */
 .menu {
     width: 80%;
     background-color: burlywood;
@@ -50,11 +86,17 @@ hr {
     margin-top: 25px;
 }
 
+/* It is a bit boring for all the text to have the same font-family. */
 h1,
 h2 {
     font-family: Impact, serif;
 }
 
+/*
+The p elements are nested in an article element with the class attribute of item. You can style all the p elements nested anywhere in elements with a class named item like this:
+
+.item p { }
+*/
 .item p {
     display: inline-block;
     margin-top: 5px;
@@ -87,14 +129,23 @@ a {
     color: black;
 }
 
+/*
+You change properties of a link when the link has actually been visited by using a pseudo-selector that looks like `a:visited { propertyName: propertyValue; }`.
+*/
 a:visited {
     color: black;
 }
 
+/*
+You change properties of a link when the mouse hovers over them by using a pseudo-selector that looks like `a:hover { propertyName: propertyValue; }`.
+*/
 a:hover {
     color: brown;
 }
 
+/*
+You change properties of a link when the link is actually being clicked by using a pseudo-selector that looks like `a:active { propertyName: propertyValue; }`.
+*/
 a:active {
     color: brown;
 }

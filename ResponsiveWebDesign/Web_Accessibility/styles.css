@@ -1,3 +1,22 @@
+/*
+On the topic of visual accessibility, contrast between elements is a key factor.
+For example, the contrast between the text and the background of a heading should be at least 4.5:1.
+*/
+
+/*
+Certain types of motion-based animations can cause discomfort for some users.
+In particular, people with vestibular disorders have sensitivity to certain motion triggers.
+
+The @media at-rule has a media feature called prefers-reduced-motion to set CSS based on the user's preferences.
+
+It can take one of the following values: `reduce` or `no-preference`
+
+@media (feature: value) {
+  selector {
+    styles
+  }
+}
+*/
 @media (prefers-reduced-motion: no-preference) {
 	* {
 		scroll-behavior: smooth;
@@ -7,6 +26,9 @@
 body {
 	background: #f5f6f7;
 	color: #1b1b32;
+
+	/* Typeface plays an important role in the accessibility of a page.
+	Some fonts are easier to read than others, and this is especially true on low-resolution screens. */
 	font-family: Helvetica;
 	margin: 0;
 }
@@ -22,6 +44,19 @@ header {
 	top: 0;
 }
 
+/*
+Currently, the img is assuming its default size, which is too large.
+CSS has a max function which returns the largest of a set of comma-separated values.
+
+For example:
+img {
+  width: max(250px, 25vw);
+}
+
+In the above example, the width of the image will be 250px if the viewport width is less than 1000 pixels.
+If the viewport width is greater than 1000 pixels, the width of the image will be 25vw.
+This is because 25vw is equal to 25% of the viewport width.
+*/
 #logo {
 	width: max(100px, 18vw);
 	background-color: #0a0a23;
@@ -41,6 +76,12 @@ nav {
 	height: 50px;
 }
 
+/*
+The child combinator selector > is used between selectors to target only elements that
+match the second selector and are a direct child of the first selector.
+
+This can be helpful when you have deeply nested elements and want to control the scope of your styling.
+*/
 nav > ul {
 	display: flex;
 	justify-content: space-evenly;
@@ -141,6 +182,16 @@ p::before {
 	padding-bottom: 0;
 }
 
+/*
+While ul/li elements are great at providing bullets for list items, your radio buttons don't need them.
+You can control what the bullets look with the list-style property.
+
+For example you can turn your bullets into circles with the following:
+
+ul {
+  list-style: circle;
+}
+*/
 .answers-list {
 	list-style: none;
 	padding: 0;

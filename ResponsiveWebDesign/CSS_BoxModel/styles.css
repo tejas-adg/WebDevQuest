@@ -33,6 +33,15 @@
 	transform: rotate(0.4deg);
 }
 
+/*
+Use the filter property to blur the painting by 2px in the .canvas element.
+
+Here's an example of a rule that add a 3px blur:
+
+p {
+  filter: blur(3px);
+}
+*/
 .one, .two {
 	filter: blur(1px);
 }
@@ -44,6 +53,10 @@
 	margin: auto;
 	filter: blur(2px);
 	box-shadow: 0 0 5px 5px #b20403;
+
+	/* The border-radius property accepts up to four values to round the top-left, top-right, bottom-right, and bottom-left corners. */
 	border-radius: 30px 25px 60px 12px;
+
+	/* Use the transform property on the .one selector to rotate it counter clockwise by 0.6 degrees. */
 	transform: rotate(-0.2deg);
 }
